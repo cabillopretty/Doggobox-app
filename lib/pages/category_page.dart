@@ -8,7 +8,7 @@ import 'package:dogfoodshop/widgets/app_snackbars.dart';
 class CategoryPage extends StatefulWidget {
   final String categoryName;
 
-  const CategoryPage({Key? key, required this.categoryName}) : super(key: key);
+  const CategoryPage({super.key, required this.categoryName});
 
   @override
   State<CategoryPage> createState() => _CategoryPageState();

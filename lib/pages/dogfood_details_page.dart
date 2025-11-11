@@ -7,14 +7,14 @@ import 'package:dogfoodshop/widgets/cart_icon_with_badge.dart';
 class DogFoodDetailsPage extends StatefulWidget {
   final Map<String, dynamic> product;
 
-  const DogFoodDetailsPage({Key? key, required this.product}) : super(key: key);
+  const DogFoodDetailsPage({super.key, required this.product});
 
   @override
   State<DogFoodDetailsPage> createState() => _DogFoodDetailsPageState();
 }
 
 class _DogFoodDetailsPageState extends State<DogFoodDetailsPage> {
-  String _selectedSize = '1kg';
+  final String _selectedSize = '1kg';
   int _quantity = 1;
 
   final List<String> sizes = ['1kg', '3kg', '5kg'];
@@ -222,7 +222,7 @@ class _DogFoodDetailsPageState extends State<DogFoodDetailsPage> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           AppSnackBars.success(
                             message:
-                                '${widget.product['name']} (${_selectedSize}) x $_quantity added to cart!',
+                                '${widget.product['name']} ($_selectedSize) x $_quantity added to cart!',
                           ),
                         );
                       },

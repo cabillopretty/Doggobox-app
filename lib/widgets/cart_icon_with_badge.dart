@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:dogfoodshop/services/cart_service.dart';
 
 class CartIconWithBadge extends StatelessWidget {
-  const CartIconWithBadge({Key? key}) : super(key: key);
+  const CartIconWithBadge({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:dogfoodshop/widgets/cart_icon_with_badge.dart';
 import 'package:dogfoodshop/widgets/app_snackbars.dart';
 
 class CartPage extends StatefulWidget {
-  const CartPage({Key? key}) : super(key: key);
+  const CartPage({super.key});
 
   @override
   State<CartPage> createState() => _CartPageState();
@@ -412,9 +412,7 @@ class _CartPageState extends State<CartPage> {
                                             },
                                             child: Container(
                                               decoration: BoxDecoration(
-                                                color: Colors.red.withOpacity(
-                                                  0.1,
-                                                ),
+                                                color: Colors.red.withAlpha((0.1 * 255).round()),
                                                 borderRadius:
                                                     BorderRadius.circular(4),
                                               ),

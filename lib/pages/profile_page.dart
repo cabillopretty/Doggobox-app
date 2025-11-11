@@ -4,7 +4,7 @@ import 'package:dogfoodshop/services/cart_service.dart';
 import 'package:dogfoodshop/widgets/cart_icon_with_badge.dart';
 
 class ProfilePage extends StatefulWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  const ProfilePage({super.key});
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();

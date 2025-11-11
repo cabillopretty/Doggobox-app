@@ -7,7 +7,7 @@ import 'package:dogfoodshop/widgets/cart_icon_with_badge.dart';
 import 'package:dogfoodshop/widgets/app_snackbars.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -21,8 +21,8 @@ class _HomePageState extends State<HomePage> {
 
   // Filter states
   String _sortBy = 'name'; // 'name', 'price-low', 'price-high'
-  Set<String> _selectedCategories = {};
-  Set<String> _selectedDietaryPrefs = {};
+  final Set<String> _selectedCategories = {};
+  final Set<String> _selectedDietaryPrefs = {};
 
   final List<String> categories = ['Food', 'Treats', 'Supplies', 'Health'];
 
@@ -220,7 +220,7 @@ class _HomePageState extends State<HomePage> {
                       this.setState(() {});
                     },
                     backgroundColor: Colors.grey[200],
-                    selectedColor: const Color(0xFF46D6F0).withOpacity(0.2),
+                    selectedColor: const Color(0xFF46D6F0).withAlpha((0.2 * 255).round()),
                     checkmarkColor: const Color(0xFF46D6F0),
                   );
                 }).toList(),
@@ -250,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                       this.setState(() {});
                     },
                     backgroundColor: Colors.grey[200],
-                    selectedColor: const Color(0xFF46D6F0).withOpacity(0.2),
+                    selectedColor: const Color(0xFF46D6F0).withAlpha((0.2 * 255).round()),
                     checkmarkColor: const Color(0xFF46D6F0),
                   );
                 }).toList(),
@@ -436,8 +436,8 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(12),
                     gradient: LinearGradient(
                       colors: [
-                        Colors.black.withOpacity(0.6),
-                        Colors.black.withOpacity(0.3),
+                        Colors.black.withAlpha((0.6 * 255).round()),
+                        Colors.black.withAlpha((0.3 * 255).round()),
                         Colors.transparent,
                       ],
                       begin: Alignment.bottomCenter,

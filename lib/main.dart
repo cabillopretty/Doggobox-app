@@ -25,7 +25,10 @@ class MyApp extends StatelessWidget {
         title: 'Doggobox',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primaryColor: const Color(0xFF46D6F0),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color(0xFF46D6F0),
+            brightness: Brightness.light,
+          ),
           scaffoldBackgroundColor: Colors.white,
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.white,
@@ -35,6 +38,15 @@ class MyApp extends StatelessWidget {
               color: Colors.black,
               fontSize: 20,
               fontWeight: FontWeight.bold,
+            ),
+            centerTitle: true,
+          ),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(double.infinity, 56),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
             ),
           ),
           useMaterial3: true,

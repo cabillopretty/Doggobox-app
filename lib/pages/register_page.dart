@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  const RegisterPage({super.key});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -54,7 +54,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 width: 80,
                 height: 80,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF46D6F0).withOpacity(0.1),
+                  color: const Color(0xFF46D6F0).withAlpha((0.1 * 255).round()),
                   shape: BoxShape.circle,
                   border: Border.all(color: const Color(0xFF46D6F0), width: 2),
                 ),
